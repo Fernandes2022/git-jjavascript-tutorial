@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+  
+  <script>
+    // const vet = {
+    //   name: 'socks',
+    //   price: 1090
+    // };
+    // console.log(vet);
+    // console.log(vet.name)
+    // console.log(vet.price);
+
+    // vet.name = 'cotton';
+    // console.log(vet);
+
+    // vet.newProperty = true;
+    // console.log(vet);
+
+    // delete vet.newProperty;
+    // console.log(vet);
+
+    // const product = {
+    //   name: 'shirt',
+    //   ['delivery-time']: '1 day', 
+    //   rating: {
+    //     stars: 4.5,
+    //     count: 87
+    //   },
+    //   fun: function function1(){
+    //     console.log('function inside object');
+    //     // alert('function inside object');
+    //   }
+    // };
+    // console.log(product);
+    // console.log(product.name);
+    // console.log(product['name'])
+    // console.log(product['delivery-time']);
+
+    // console.log(product.rating.count)
+    // product.fun();
+
+    // // console is just a function just like function, example below
+
+    // console.log(typeof console.log);
+
+    // console.log(JSON.stringify(product));
+    
+    // const jsonString = JSON.stringify(product);
+    // console.log(JSON.parse(jsonString));
+
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    const object1 = {
+      message: 'hello'
+    };
+    const object2 = object1;
+    object1.message = 'Good job!';
+    console.log(object1);
+    console.log(object2);
+
+    const object3 = {
+      message: 'Good job!'
+    }
+    console.log(object3 === object1);
+    console.log(object1 === object1);
+
+    const object4 = {
+      message: 'Good job!',
+      price: 799
+    }
+    // const message = object4.message;
+    const {message, price} = object4;
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+    // message: message 
+      message,
+      // method: function function1(){
+      //   console.log('metthod');
+    // }  
+      method(){
+        console.log('method');
+      }
+    };
+    console.log(object5)
+    object5.method();
+  </script>
+</body>
+</html>

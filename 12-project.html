@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+</head>
+<body>
+  
+  <button class="js-start">Start</button> <button class="js-restart">Reset</button>
+  <p class="js-stopwatch-show"></p>
+
+  <script>
+  let stop = {
+    watch: 0
+  };
+
+document.querySelector('.js-start').
+  addEventListener('click', () => {
+    stopWatchRead();
+  })
+
+  document.querySelector('.js-restart').
+  addEventListener('click', () => {
+    resetWatch();
+  })
+
+    function resetWatch () {
+    stop.watch = 0;
+    document.querySelector('.js-stopwatch-show').innerHTML = stop.watch;
+    
+  }
+
+    let isAuto = false;
+    let intervalId;
+  const stopWatchRead = () => {
+    const inputElement = document.querySelector('.js-start');
+    if (inputElement.innerText === 'Start') {
+      inputElement.innerHTML = 'Stop'
+      if (!isAuto) {
+      intervalId = setInterval(() => {
+        stopFunction();
+      }, 1000);
+      isAuto = true;
+    }
+   }else{
+    inputElement.innerHTML = 'Start'
+    clearInterval(intervalId);
+    isAuto = false;
+    
+   }
+  }
+  
+  function stopFunction () {
+    stop.watch++;
+    document.querySelector('.js-stopwatch-show').innerHTML = stop.watch;
+  }
+
+  console.log(stopWatchRead());
+
+// document.querySelector('.js-start').
+//   addEventListener('click', () => {
+//     intervalId
+//   })
+//   let intervalId;
+//     intervalId = setInterval(() => {
+//     stopWatchRead();
+//   }, 1000);
+//     let stopWatchs = 0;
+//   const stopWatchRead = () => {
+//     const buttonElement = document.querySelector('.js-start');
+//     if (buttonElement.innerText === 'Start') {
+//       stopWatchs++;
+//       document.querySelector('.js-stopwatch-show').innerHTML = stopWatchs;
+//     }
+    
+//   }
+  
+  
+  </script>
+</body>
+</html>

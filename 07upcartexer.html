@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Up Cart</title>
+</head>
+<body>
+    <button onclick="
+    cartQuantity = 0;
+    console.log(`cart Quantity ${cartQuantity}`);
+      ">Show Quantity</button>
+    <button onclick="
+    addTo(1);
+    ">Add to Cart</button>
+
+    <button onclick="
+    addTo(2);
+    ">+2</button>
+    <button onclick="
+    addTo(3);
+  ">+3</button>
+  <button onclick="
+    addTo(4);
+      ">+4</button>
+      <button onclick="
+    addTo(5);
+      ">+5</button>
+      <button onclick="
+      addTo(-4);
+      ">-4</button>
+      <button onclick="
+      addTo(-5);
+      ">-5</button>
+    <button onclick="
+     cartQuantity = '';
+     console.log(cartQuantity);
+    ">Clear</button>
+    <p class="js-show"></p>
+
+    <script>
+      let cartQuantity = 0;
+    function addTo(change){
+      cartQuantity += change;
+    if(cartQuantity > 10){
+      alert('The cart is full');
+    }else if(cartQuantity < 0){
+      alert('The cart quantity is blank!');
+    }else{
+      console.log(`cart Quantity ${cartQuantity}`);
+    }
+    }
+
+    </script>
+</body>
+</html>

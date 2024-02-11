@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/10-updatecalculator.css">
+  <title>Calculation</title>
+</head>
+<body>
+  <p class="js-show"></p>
+<p>
+  <button onclick="
+    calculationUpdate(1);
+    " class="pale">1</button>
+  <button onclick="
+  calculationUpdate(2);
+  " class="pale">2</button>
+  <button onclick="
+  calculationUpdate(3);
+  " class="pale">3</button>
+  <button onclick="
+  calculationUpdate('+');
+  " class="yellow">+</button>
+</p>
+<p>
+  <button onclick="
+  calculationUpdate(4);
+  " class="pale">4</button>
+  <button onclick="
+  calculationUpdate(5);
+  " class="pale">5</button>
+  <button onclick="
+  calculationUpdate(6);
+  " class="pale">6</button>
+  <button onclick="
+  calculationUpdate('-');
+  " class="yellow">-</button>
+</p>
+<p>
+  <button onclick="
+  calculationUpdate(7);
+  " class="pale">7</button>
+  <button onclick="
+  calculationUpdate(8);
+  " class="pale">8</button>
+  <button onclick="
+  calculationUpdate(9);
+  " class="pale">9</button>
+  <button onclick="
+  calculationUpdate('*');
+  " class="yellow">*</button>
+</p>
+<p>
+  <button onclick="
+  calculationUpdate(0);
+  " class="pale">0</button>
+  <button onclick="
+  calculationUpdate('.');
+  " class="pale">.</button>
+  <button onclick="
+  calculator = eval(calculator);
+  document.querySelector('.js-show').innerHTML = calculator;
+  " class="pale">=</button>
+  <button onclick="
+  calculationUpdate('/');
+  " class="yellow">/</button>
+</p>
+<p>
+  <button onclick="
+  calculator = '';
+  localStorage.setItem('calculator', calculator);
+  document.querySelector('.js-show').innerHTML = calculator;
+  "  class="pale">Clear</button>
+</p>
+
+
+
+<script src="scripts/10-updatecalculator.js">
+
+</script>
+
+</body>
+</html>

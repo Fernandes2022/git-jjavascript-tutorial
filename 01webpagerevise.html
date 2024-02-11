@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpagerevise</title>
+</head>
+<style>
+  .button{
+    text-decoration: none;
+  }
+</style>
+<body>
+  <!-- <button><a class="button" href="./07-rock-paper-scissors.html">Button</a></button> -->
+<p>
+  <button onclick="
+    calculationTo(1);
+    ">1</button>
+  <button onclick="
+  calculationTo(2);
+  ">2</button>
+  <button onclick="
+  calculationTo(3);
+  ">3</button>
+  <button onclick="
+  calculationTo('+');
+  ">+</button>
+</p>
+<p>
+  <button onclick="
+  calculationTo(4);
+  ">4</button>
+  <button onclick="
+  calculationTo(5);
+  ">5</button>
+  <button onclick="
+  calculationTo(6);
+  ">6</button>
+  <button onclick="
+  calculationTo('*');
+  ">*</button>
+</p>
+<p>
+  <button onclick="
+  calculationTo(7);
+  ">7</button>
+  <button onclick="
+  calculationTo(8);
+  ">8</button>
+  <button onclick="
+  calculationTo(9);
+  ">9</button>
+  <button onclick="
+  calculationTo('/');
+  ">/</button>
+</p>
+<p>
+  <button onclick="
+    calculationTo(0);
+    ">0</button>
+  <button onclick="
+  calculationTo('.');
+  ">.</button>
+  <button onclick="
+    calculation = eval(calculation);
+    alert(calculation);
+    ">=</button>
+</p>
+<p><button onclick="
+  calculation = '';
+  
+">Clear</button></p>
+
+<script>
+  let calculation = '';
+  function calculationTo(value){
+    calculation += value;
+    console.log(calculation);
+  }
+</script>
+</body>
+</html>

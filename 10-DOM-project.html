@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM project</title>
+  <style>
+    body{
+    font-family: Arial;
+  }
+  .js-subscribe-button{
+    border: none;
+    border-radius: 45px;
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  .is-subscribed{
+    background-color: rgb(240, 240, 240);
+    color: black;
+  }
+  .js-cost-input{
+    font-size: 15px;
+    padding: 10px;
+  }
+  .calculate{
+    background-color: green;
+    border: none;
+    padding: 12px 15px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button </p>
+  <button onclick="
+   subscribe();
+  " class="js-subscribe-button">Subscribe</button>
+
+<p>Amazon Shipping calculator</p>
+<input placeholder="Cost of order" type="number" class="js-cost-input" onkeydown="
+handleCostKeyDown();
+">
+<button class="calculate" onclick="
+  calculateTotal();
+">Calculate</button>
+<p class="js-total-cost"></p>
+
+  <script>
+    window.document
+    window.console.log('window')
+    window.alert
+
+    function handleCostKeyDown(){
+      if(event.key === 'Enter'){
+    calculateTotal();
+  }
+    }
+
+    function calculateTotal(){
+    const inputElement = document.querySelector('.js-cost-input');
+    let cost = Number(inputElement.value);
+    if(cost < 40) {
+      cost = cost + 10;
+    }
+
+    document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+     
+    inputElement.value = '';
+    }
+
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-subscribe-button');
+    if(buttonElement.innerText === 'Subscribe'){
+      buttonElement.innerHTML = 'Subscribed';
+      buttonElement.classList.add('is-subscribed');
+    }
+    else{
+      buttonElement.innerHTML = 'Subscribe';
+      buttonElement.classList.remove('is-subscribed');
+    }
+    }
+  </script>
+</body>
+</html>

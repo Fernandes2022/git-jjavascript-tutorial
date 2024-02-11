@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculation</title>
+</head>
+<body>
+<p>
+  <button onclick="
+    calculationUpdate(1);
+    ">1</button>
+  <button onclick="
+  calculationUpdate(2);
+  ">2</button>
+  <button onclick="
+  calculationUpdate(3);
+  ">3</button>
+  <button onclick="
+  calculationUpdate('+');
+  ">+</button>
+</p>
+<p>
+  <button onclick="
+  calculationUpdate(4);
+  ">4</button>
+  <button onclick="
+  calculationUpdate(5);
+  ">5</button>
+  <button onclick="
+  calculationUpdate(6);
+  ">6</button>
+  <button onclick="
+  calculationUpdate('-');
+  ">-</button>
+</p>
+<p>
+  <button onclick="
+  calculationUpdate(7);
+  ">7</button>
+  <button onclick="
+  calculationUpdate(8);
+  ">8</button>
+  <button onclick="
+  calculationUpdate(9);
+  ">9</button>
+  <button onclick="
+  calculationUpdate('*');
+  ">*</button>
+</p>
+<p>
+  <button onclick="
+  calculationUpdate(0);
+  ">0</button>
+  <button onclick="
+  calculationUpdate('.');
+  ">.</button>
+  <button onclick="
+  calculator = eval(calculator);
+  alert(calculator);
+  ">=</button>
+  <button onclick="
+  calculationUpdate('/');
+  ">/</button>
+</p>
+<p>
+  <button onclick="
+  calculator = '';
+  console.log(calculator);
+  ">Clear</button>
+</p>
+
+
+<script>
+let calculator = '';
+function calculationUpdate(value){
+  calculator += value;
+  console.log(calculator);
+}
+</script>
+
+</body>
+</html>

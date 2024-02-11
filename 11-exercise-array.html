@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11-exercise</title>
+</head>
+<body>
+  
+  <script>
+    const nums = [10, 20, 30];
+
+    nums[2] = 99;
+    console.log(nums);
+    
+  function getLastValue(array){
+   const lastIndex = array.length - 1;
+    return array[lastIndex];
+  }
+  console.log(getLastValue([1, 20, 22, 24, 5]));
+  console.log(getLastValue(['hi', 'hello', 'good']));
+  function arraySwap(params) {
+    const swap = params.length - 1;
+    const lastIndex = params[swap];
+    const firstIndex = params[0];
+    params[0] = lastIndex;
+    params[swap] = firstIndex;
+
+    return params;
+  }
+
+  console.log(arraySwap([1, 20, 22, 24, 5]));
+  console.log(arraySwap(['hi', 'hello', 'good']));
+
+//   let i = 1;
+//  for (let i = 0; i <= 10; i = i + 2) {
+//   console.log(i);
+  
+//  }
+ 
+//  for (let i = 5; i >= 0; i = i - 1) {
+//     console.log(i);
+  
+let i = 0;
+ while (i <= 10) {
+  console.log(i);
+  i += 2;
+ }
+ i = 5;
+ while (i >= 0) {
+  console.log(i);
+  i--;
+ }
+
+const loops = [1, 2, 3];
+let double = [];
+for (let i = 0; i < loops.length; i++) {
+  const lint = loops[i];
+  double.push(lint + 1);
+  
+}
+console.log(double);
+
+function addOne(array){
+  let doub = [];
+ for (let i = 0; i < array.length; i++) {
+  const element = array[i];
+  doub.push(element + 1);
+  }
+  return doub;
+}
+console.log(addOne([1, 2, 3]));
+console.log(addOne([-2, -1, 0, 99]))
+
+function addNum(array, num){
+  let doubleSo = [];
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    doubleSo.push(element + num);
+    
+  }
+  return doubleSo;
+}
+console.log(addNum([1, 2, 3], 2));
+console.log(addNum([1, 2, 3], 3));
+console.log(addNum([-2, -1, 0, 99], 2));
+
+function addArrays(array1, array2){
+  let doubleArray = [];
+  for (let i = 0; i < array1.length; i++) {
+    const element = array1[i];
+    const element2 = array2[i]
+    doubleArray.push(element + element2);
+    
+  }
+  return doubleArray;
+}
+console.log(addArrays([1,1,2], [1, 1, 3]));
+console.log(addArrays([1, 2, 3], [4, 5, 6]));
+
+function countPositive(nums){
+  let great = 0;
+  for (let i = 0; i < nums.length; i++) {
+    const element = nums[i];
+    if(element >= 0){
+      great++;
+    }
+  }
+  return great;
+}
+console.log(countPositive([1, -3, 5]));
+console.log(countPositive([-2, 3, -5, 7, 10]));
+
+
+  </script>
+</body>
+</html>

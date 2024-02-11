@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09-Exercise</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-change" onclick="changeTo();">9b</button>
+  <P></P>
+  <button onclick="
+  clickMe('heads');
+  ">heads</button>
+  <button onclick="
+  clickMe('tails');
+  ">tails</button>
+  <p class="js-paragraph"></p>
+  <p></p>
+  <input type="text" placeholder="Name" class="js-text-box" onkeydown="
+  onkeyDo();
+  ">
+  <button onclick="
+  textBox();
+  ">Submit</button>
+  <p class="js-submit"></p>
+ 
+ <input type="text" placeholder="Type something..." onkeyup="
+ keyUp();
+ " class="key">
+ <p class="js-key-up"></p>
+ 
+ <script>
+
+   console.log(document.querySelector('button'));
+
+function keyUp(){
+  const keySet = document.querySelector('.key');
+  let funct = keySet.value;
+  document.querySelector('.js-key-up').innerHTML = funct;
+}
+
+function onkeyDo(){
+  if(event.key === 'Enter'){
+    textBox();
+  }
+}
+
+function textBox(){
+ const meText = document.querySelector('.js-text-box');
+ let selector = meText.value;
+ document.querySelector('.js-submit').innerHTML = `Your name is: ${selector}`;
+}
+function changeTo(){
+   let change = document.querySelector('.js-change');
+  if(change.innerText === '9b'){
+    change.innerHTML = '9b done!';
+  }else{
+    change.innerHTML = '9b';
+  }}
+function clickMe(value){
+let result = '';
+  if(value === 'heads'){
+    result = 'You chose: heads';
+  }else if(value === 'tails'){
+    result = 'You chose: tails';
+  }
+  
+  document.querySelector('.js-paragraph').innerHTML = result;
+}
+  
+  </script>
+</body>
+</html>

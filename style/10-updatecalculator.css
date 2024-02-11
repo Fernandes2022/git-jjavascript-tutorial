@@ -1,0 +1,14 @@
+.yellow{
+  background-color: yellow;
+  border-radius: 35px;
+  border: none;
+  height: 50px;
+  width: 50px;
+}
+.pale{
+  background-color: paleturquoise;
+  border-radius: 35px;
+  border: none;
+  height: 50px;
+  width: 50px;
+}

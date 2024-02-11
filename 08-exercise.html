@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-Exercise</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+    let amazon = {
+      basketball: 2095,
+      ['deliverytime']: '3days',
+    }
+    console.log(amazon.basketball);
+    console.log(amazon.basketball+500);
+    console.log(amazon['deliverytime']);
+
+    const product1 = {
+        name: 'shirt',
+        price: 2099
+      }
+      const product2 = {
+        name: 'socks',
+        price: 1099
+      }
+    function comparePrice(product1, product2){
+      
+      if(product1.price < product2.price){
+        return product1;
+      }else{
+        return product2;
+      }
+    }
+    function isSameProduct(procduct1,product2){
+      if(product1 === product2){
+        return true;
+      }else{
+        return false;
+      }
+    }
+      let randomCase = 'Good Morning';
+        randomCase = randomCase.toLowerCase();
+      let repeatString = 'hei'
+          repeatString = repeatString.repeat(5);
+      
+    console.log(comparePrice(product1,product2));
+    console.log(isSameProduct(product1, product2));
+    console.log(randomCase);
+    console.log(repeatString);
+  </script>
+</body>
+</html>

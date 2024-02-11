@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise-part2</title>
+</head>
+<body>
+  
+  <script>
+const multiply = (a, b) => {
+  return a*b;
+}
+
+console.log(multiply(2, 3));
+console.log(multiply(7, 10));
+
+const countPositive = (nums) => {
+  let countPos = 0;
+  nums.forEach((num, index) => {
+  if(num >= 0){
+    countPos++;
+  }
+  });
+  return countPos;
+}
+console.log(countPositive([1, -3, 5]));
+console.log(countPositive([-2, 3, -5, 7, 10]));
+
+const addNum = (array, num) => {
+const test = array.map((value, index) => 
+ value + num
+);
+ return test;
+}
+console.log(addNum([1, 2, 3], 2));
+console.log(addNum([-2, -1, 0, 99], 2));
+
+const testRun = (array) => {
+ return array.map((val, index) => 
+  val + 2
+  );
+}
+console.log(testRun([1, 2, 3]));
+
+const removeEgg = (foods) => {
+return foods.filter((value) => value !== 'egg')
+}
+console.log(removeEgg(['egg', 'apple', 'egg', 'ham']));
+
+const removeEggs = (foods) => {
+return foods.filter((value) => {
+  if (value === 'egg'){
+    return false;
+  }
+  return true;
+});
+}
+console.log(removeEggs(['egg', 'apple', 'egg', 'ham']));
+
+const removeEggg = (foods) => {
+let eggRemove = 0;
+return foods.filter((value) => {
+  if (value === 'egg' && eggRemove < 2){
+    eggRemove++;
+    return false;
+  }
+  return true;
+});
+}
+console.log(removeEggg(['egg', 'apple', 'egg', 'egg', 'ham']));
+  </script>
+</body>
+</html>
